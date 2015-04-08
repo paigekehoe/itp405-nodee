@@ -2,16 +2,30 @@
 <html>
 <head>
     <title>Dvds</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-<p><%= dvds.length %> dvds found.</p>
-
-<ul>
-    <% dvds.forEach(function(dvd) { %>
-        <li><%= dvd.title %> (<%= dvd.award %>)</li>
-    <% }); %>
-</ul>
+	<div>
+		<h1 style="align:center;"><%= dvds.length %> dvds found!</h1>
+	</div>
+<div>
+	<table class= "table table-striped">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Award</th>
+			</tr>
+		</thead>
+		<tbody>
+	    <% dvds.forEach(function(dvd) { %>
+	    <tr>
+	        <td><%= dvd.title %> </td>
+	        <td><%= dvd.award %></td>
+	    </tr>
+	    <% }); %>
+	    <tbody>
+	</table>
+</div>
 
 </body>
 </html>
